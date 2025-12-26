@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HERO / BANNER */
+.hero {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+        url("../img/banner.jpg") center/cover;
+    color: white;
+    padding: 100px 0;
+}
+
+/* CARD PRODUK & LAYANAN */
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* FOOTER */
+footer {
+    background: #0d6efd;
+    color: white;
+}
+
+.logo-navbar {
+    height: 40px;
+    width: auto;
+}
