@@ -2,13 +2,38 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* FIX DROPDOWN TERTUTUP */
+.navbar {
+  z-index: 1055;
+}
+
+/* PASTIKAN DROPDOWN DI ATAS SEMUA */
+.dropdown-menu {
+  z-index: 1060;
+}
+
+
 /* HERO / BANNER */
 .hero {
+    position: relative;
     background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
-        url("../img/banner.jpg") center/cover;
+        url("../img/banner.png") center/cover;
     color: white;
     padding: 100px 0;
 }
+
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    border-top-left-radius: 100% 100%;
+    border-top-right-radius: 100% 100%;
+}
+
 
 /* CARD PRODUK & LAYANAN */
 .card img {
@@ -25,4 +50,261 @@ footer {
 .logo-navbar {
     height: 40px;
     width: auto;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    letter-spacing: -.5px;
+}
+
+.service-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  transition: .3s;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background: #0d6efd;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #ffffff; /* warna biru bootstrap */
+  margin: 12px auto 0;
+  border-radius: 10px;
+}
+
+.section-titleDark::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #1c2535; /* warna biru bootstrap */
+  margin: 12px auto 0;
+  border-radius: 10px;
+}
+
+.card img {
+    height: 300px !important;
+    object-fit: cover;
+}
+
+/* LOGO */
+.logo-navbar {
+  height: 40px;
+  width: auto;
+}
+
+/* NAV LINK */
+.navbar .nav-link {
+  font-weight: 500;
+  color: #ddd !important;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #fff !important;
+}
+
+/* UNDERLINE HOVER */
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  width: 0;
+  height: 2px;
+  background-color: #0d6efd;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar .nav-link:hover::after {
+  width: 60%;
+}
+
+/* DROPDOWN */
+.dropdown-menu {
+  min-width: 220px;
+}
+
+.dropdown-item {
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f5ff;
+  color: #0d6efd;
+}
+
+/* MOBILE */
+@media (max-width: 991px) {
+  .navbar .nav-link::after {
+    display: none;
+  }
+}
+
+/* WHY US CARD */
+.why-card {
+  border-radius: 20px;
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.25);
+}
+
+/* ICON BOX */
+.icon-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0d6efd, #0a58ca);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 32px;
+}
+
+/* TITLE LINE (KONSISTEN) */
+.title-line {
+  width: 70px;
+  height: 4px;
+  border-radius: 6px;
+}
+
+body {
+  position: relative;
+}
+
+section {
+  position: relative;
+  z-index: 1;
+}
+
+.navbar,
+.navbar .container {
+  overflow: visible;
+}
+
+/* FIX DROPDOWN NAVBAR */
+.navbar-collapse {
+  overflow: visible !important;
+}
+
+.navbar {
+  z-index: 1100;
+}
+
+.dropdown-menu {
+  z-index: 1200;
+}
+
+.sticky-top {
+  z-index: 1100;
+}
+
+.logo-navbar {
+  height: 40px;
+}
+
+/* LINK STYLE */
+.navbar .nav-link {
+  font-weight: 500;
+  color: #ddd !important;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #fff !important;
+}
+
+/* UNDERLINE HOVER */
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  width: 0;
+  height: 2px;
+  background-color: #0d6efd;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar .nav-link:hover::after {
+  width: 60%;
+}
+
+/* MOBILE */
+@media (max-width: 991px) {
+  .navbar .nav-link::after {
+    display: none;
+  }
+}
+
+.contact-list span {
+  line-height: 1.6;
+}
+
+.title-line {
+  width: 60px;
+  height: 4px;
+  background: #0d6efd;
+  border-radius: 10px;
+}
+
+
+.contact-card {
+  margin-top: -100px;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-hero {
+  position: relative;
+  min-height: 40vh;
+  background: url('../img/kantor.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.contact-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.title-line {
+  width: 70px;
+  height: 4px;
+  background: #0d6efd;
+  border-radius: 10px;
 }
